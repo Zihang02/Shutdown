@@ -16,5 +16,29 @@ namespace WindowsFormsApplication2
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.SetSuspendState(PowerState.Suspend, true, true);
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("shutdown.exe", "/s /t 0");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("shutdown.exe", "/r /t 0");
+        }
     }
 }
